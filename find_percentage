@@ -1,0 +1,17 @@
+if __name__ == '__main__':
+    n = int(input())
+    student_marks = {}
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+    query_name = input()
+    
+    student_score = student_marks[query_name]
+    total_score = 0
+    for i in range(len(student_score)):
+        total_score += student_score[i]
+    
+    average_score = total_score / (len(student_score))
+    
+    print(format(average_score, '.2f'))
