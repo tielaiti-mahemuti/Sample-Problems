@@ -1,0 +1,8 @@
+x = int(input())
+y = int(input())
+
+z = divmod(x,y)
+
+print(z[0])
+print(z[1])
+print(z)
