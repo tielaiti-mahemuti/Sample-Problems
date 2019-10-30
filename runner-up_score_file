@@ -1,0 +1,28 @@
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    
+    list_view = list(arr)
+    high = list_view[0]
+    for i in range(len(list_view)):
+        if(list_view[i] >= high):
+            high = list_view[i]
+    
+    while True:
+        for i in range(len(list_view)):
+            if(high == list_view[i]):
+                del list_view[i]
+                break
+            else:
+                continue
+        if high not in list_view:
+            break
+        else:
+            continue
+    
+    new_high = list_view[0]
+    for i in range(len(list_view)):
+        if(list_view[i] >= new_high):
+            new_high = list_view[i]
+    
+    print(new_high)
